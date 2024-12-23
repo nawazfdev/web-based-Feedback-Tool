@@ -37,51 +37,26 @@ This project is a Feedback Management System built using Vue.js for the frontend
 
 ### Backend
 1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-   cd <project-directory>
-   ```
+    git clone  https://github.com/nawazfdev/web-based-Feedback-Tool.git
+
 2. Install dependencies:
-   ```bash
-   composer install
-   ```
-3. Configure environment variables:
+    composer install
+ 3. Configure environment variables:
    - Rename `.env.example` to `.env`.
    - Update database credentials and other necessary configurations.
 
 4. Run database migrations:
-   ```bash
+    php artisan migrate
+ 5. Start the development server:
+    php artisan serve
+ 6. Install Sanctum:
+    php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
    php artisan migrate
-   ```
-5. Start the development server:
-   ```bash
-   php artisan serve
-   ```
-6. Install Sanctum:
-   ```bash
-   php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
-   php artisan migrate
-   ```
-
-### Frontend
-1. Navigate to the frontend directory:
-   ```bash
-   cd <frontend-directory>
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Run the development server:
-   ```bash
-   npm run serve
-   ```
-
 ## API Endpoints
 
 ### Authentication
-- `POST /api/register`: Register a new user.
-- `POST /api/login`: Log in a user.
+- `POST /api/auth/register`: Register a new user.
+- `POST /api/auth/login`: Log in a user.
 - `POST /api/logout`: Log out the authenticated user.
 
 ### Feedback
@@ -105,10 +80,9 @@ This project is a Feedback Management System built using Vue.js for the frontend
 - Enhance the UI/UX design.
 - Add pagination for feedback and comments.
 
-## License
-This project is licensed under the MIT License. See the LICENSE file for more information.
-
+ 
 ---
 
 Enjoy using the Feedback Management System!
+By Muhammad Nawaz
 
